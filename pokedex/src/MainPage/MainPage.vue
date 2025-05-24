@@ -26,17 +26,23 @@
 </script>
 
 <template>
-  <div class="title">
-    <img class="logo" src="@/assets/pokeball.svg">
-    <h1>Pokédex</h1>
+  <div class="mainpage">
+    <div class="title">
+      <img class="logo" src="@/assets/pokeball.svg">
+      <h1>Pokédex</h1>
+    </div>
+    <Nav @InputChange="InputChange"></Nav>
+    <Body :SortByValue="SortByValue" :InputValue="InputValue" @redirect="redirect"></Body>
   </div>
-  <Nav @InputChange="InputChange"></Nav>
-  <Body :SortByValue="SortByValue" :InputValue="InputValue" @redirect="redirect"></Body>
 </template>
 
 <style scoped>
+  .mainpage{
+    background-color:#dc0a2d;
+    height: 100vh;
+    overflow-y: hidden;
+  }
   .title{
-    width: 100%;
     padding-left: 5%;
     display: flex;
   }
@@ -45,5 +51,8 @@
     color: white;
     font-size: 25px;
     font-family: "Poppins", sans-serif;
+  }
+  h1{
+    transform: scaleX(1.1) scaleY(0.95);
   }
 </style>

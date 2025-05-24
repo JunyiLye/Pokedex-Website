@@ -53,11 +53,10 @@
 </template>
 <style scoped>
     .Body{
-        margin:10px 0px;
-        width:100%;
-        height: 600px;
+        margin: 20px 8px;
+        height: 80%;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 15px;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
