@@ -54,7 +54,7 @@
 <style scoped>
     .Body{
         margin: 20px 8px;
-        height: 80%;
+        height: 84%;
         background-color: white;
         border-radius: 15px;
         flex-wrap: wrap;

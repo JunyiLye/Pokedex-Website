@@ -224,8 +224,8 @@
         flex-direction: column;
         text-align: center;
         background-color: white;
-        width: 380px;
-        height: 400px;
+        width: 480px;
+        height: 500px;
         border-radius: 10px;
         padding: 56px 20px 20px 20px;
         border: solid 2px white;
@@ -244,14 +244,14 @@
         color: white;
         font-weight: bolder;
         transform: scaleX(1.1);
-        font-size: 9px;
+        font-size: 9.5px;
         background-color: var(--color);
     }
     .about,.base_stats{
         font-weight: bolder;
         transform: scaleX(1.1);
-        margin: 2px 0px;
-        font-size: 9px;
+        margin: 5px 0px;
+        font-size: 12px;
     }
     .details_wrapper{
         display: flex;
@@ -265,11 +265,11 @@
         align-items: end;
     }
     .details{
-        width: 30%;
+        width: 33%;
         height: fit-content;
         border-right: solid lightgray 1px;
         padding: 10px 0px;
-        font-size: 8px;
+        font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -278,7 +278,7 @@
         padding: 0px 5px;
     }
     .details_title{
-        width: 30%;
+        width: 33%;
         padding: 15px 0px;
         font-size: 9px;
         height: fit-content;
@@ -286,41 +286,41 @@
         color: gray;
     }
     .abilities{
-        width: 30%;
+        width: 33%;
         display: flex;
         flex-direction: column;
         padding: 10px 0px;
     }
     .ability{
         padding-top: 15px;
-        font-size: 9px;
+        font-size: 10px;
     }
     .ability_title{
-        width: 30%;
+        width: 33%;
         padding: 15px 0px;
         font-size: 9px;
         color: gray;
     }
     .text_entries{
-        font-size: 8px;
+        font-size: 10px;
         transform: scaleX(1.1);
-        margin: 0px 0px 15px 0px;
+        margin: 0px 0px 20px 0px;
     }
     .stat{
         display: flex;
         justify-content: center;
-        margin: 17px 0px;
+        margin: 28px 0px;
     }
     .stat_name{
         border-right: solid 1px lightgray;
         width: 10%;
-        font-size: 8px;
-        font-weight: bolder;
+        font-size: 9px;
+        font-weight: 800;
         color: var(--color);
     }
     .stat_value{
         width: 10%;
-        font-size: 8px;
+        font-size: 10px;
     }
     progress {
         appearance: none;
