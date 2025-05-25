@@ -340,4 +340,35 @@
         background-color: var(--color);
         border-radius: 20px;
     }
+    @media only screen and (max-width: 545px) {
+        .PokemonDetails{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: white;
+            height: fit-content;
+            border-radius: 10px;
+            padding: 56px 20px 20px 20px;
+            border: solid 2px white;
+            box-shadow: 0px 0px 10px darkgray;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .stat{
+            display: flex;
+            justify-content: center;
+            margin: 28px 0px;
+        }
+        .stat_name{
+            border-right: solid 1px lightgray;
+            width: 20%;
+            font-size: 9px;
+            font-weight: 800;
+            color: var(--color);
+        }
+        .stat_value{
+            width: 20%;
+            font-size: 10px;
+        }
+    }
 </style>
