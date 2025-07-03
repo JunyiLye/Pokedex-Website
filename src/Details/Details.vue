@@ -6,9 +6,24 @@
 
     const props = defineProps<{
         id: string
-    }>()
+    }>()    
 
-    const Color:any={
+    type ColorMap = Record<string, string>;
+    type FlavorTextEntries ={ flavor_text: string; language: { name: string } }[];
+
+    interface PokemonDetails {
+        name: string;
+        types: { type: { name: string } }[];
+        weight: number;
+        height: number;
+        abilities: { ability: { name: string } }[];
+        stats: { base_stat: number }[];
+    }
+    interface FlavorText {
+        flavor_text_entries: FlavorTextEntries;
+    }
+
+    const Color:ColorMap={
         grass   : "rgb(120, 200, 80)",
         fire    : "rgb(240, 128, 48)",
         water   : "rgb(104, 144, 240)",
@@ -26,8 +41,8 @@
         dragon  : "rgb(112, 56, 248)"
     }
 
-    let pokemonDetails:any = ref(null);
-    let flavorText:any = ref(null);
+    let pokemonDetails = ref<PokemonDetails | null>(null);
+    let flavorText = ref<FlavorText | null>(null);
 
     let fetchData = async function(){
         pokemonDetails.value = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${props.id}`)).json();
@@ -68,8 +83,8 @@
     let CapitalizedName = function(name:string):string{
         return name.charAt(0).toUpperCase() + name.slice(1);
     }
-    let getEnglishText = function(obj:any){
-        for(let i of obj){
+    let getEnglishText = function(entry:FlavorTextEntries){
+        for(let i of entry){
             if(i.language.name === "en"){
                 return i.flavor_text.replace(/[\n\f\r\u000c]/g, ' ');
             }
